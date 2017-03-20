@@ -10,14 +10,22 @@ public class MultiplicadorDieces {
 
     public MultiplicadorDieces() {
 
-        primerNumero = 0.0D;
-        segundoNumero = 0;
+
     }
 
     public Double multiplicarPorDieces(Double primerNumero, int segundoNumero){
 
+        double elevado = 10.0D, potencia = 0.0D, total = 0.0D;
 
-        return 0.0;
+        potencia = Math.pow(elevado,segundoNumero);
+
+        //System.out.println(potencia);
+
+        total = primerNumero * potencia;
+
+        //System.out.println(total);
+
+        return total;
     }
 
 }

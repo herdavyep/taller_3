@@ -8,9 +8,10 @@ import java.util.Scanner;
 public class Palabras {
 
     public static void main(String[] args) throws InterruptedException {
+
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Comparar palabras");
+        System.out.println("\nComparar palabras\n");
         System.out.println("Ingrese La palabra 1: ");
 
         String palabra1 = sc.nextLine();
@@ -19,40 +20,44 @@ public class Palabras {
 
         String palabra2 = sc.nextLine();
 
-        char[] CharPalabra1 = palabra1.toCharArray();
-        char[] CharPalabra2 = palabra2.toCharArray();
-        char[] PalabraCiclo;
-        char[] PalabraMenor;
+        char[] arrayPalabra1 = palabra1.toCharArray();
+        char[] arrayPalabra2 = palabra2.toCharArray();
 
-        if (CharPalabra1.length > CharPalabra2.length){
-            PalabraCiclo = CharPalabra1;
-            PalabraMenor = CharPalabra2;
+        char[] palabraCiclo;
+        char[] palabraMenor;
+
+        if (arrayPalabra1.length > arrayPalabra2.length){
+
+            palabraCiclo = arrayPalabra1;
+            palabraMenor = arrayPalabra2;
+
         }else{
-            PalabraCiclo = CharPalabra2;
-            PalabraMenor = CharPalabra1;
+
+            palabraCiclo = arrayPalabra2;
+            palabraMenor = arrayPalabra1;
         }
 
-        for(int x=0 ; x <= PalabraCiclo.length ; x++ ){
+        for(int i = 0; i <= palabraCiclo.length ; i++ ){
 
 
-            if (x < PalabraMenor.length)
+            if (i < palabraMenor.length)
             {
-                if(CharPalabra1[x] == CharPalabra2[x])
+                if(arrayPalabra1[i] == arrayPalabra2[i])
                 {
-                    System.out.println("¿Letra "+(x+1)+" igual en las dos palabras? Verdadero");
+                    System.out.println("¿Letra "+(i + 1)+" igual en las dos palabras? Verdadero");
                 }
                 else
                 {
-                    System.out.println("¿Letra "+(x+1)+" igual en las dos palabras? Falso");
+                    System.out.println("¿Letra "+(i + 1)+" igual en las dos palabras? Falso");
                 }
             }
-            else if (x > CharPalabra1.length)
+            else if (i > arrayPalabra1.length)
             {
-                System.out.println("La palabra 1 no tiene letra "+x);
+                System.out.println("La palabra 1 no tiene letra "+ i);
             }
-            else if (x > CharPalabra2.length)
+            else if (i > arrayPalabra2.length)
             {
-                System.out.println("La palabra 2 no tiene letra "+x);
+                System.out.println("La palabra 2 no tiene letra "+ i);
             }
         }
     }

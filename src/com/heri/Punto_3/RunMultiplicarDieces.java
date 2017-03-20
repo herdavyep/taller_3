@@ -7,7 +7,11 @@ public class RunMultiplicarDieces {
 
     public static void main(String[] args) {
 
+        //Double numero1;
 
+        MultiplicadorDieces numero = new MultiplicadorDieces();
+
+        System.out.println(numero.multiplicarPorDieces(3.0,5));
 
     }
 
